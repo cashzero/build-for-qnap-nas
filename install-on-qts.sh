@@ -5,6 +5,12 @@ BUILD_SCRIPT_NAME="build-git.sh"
 BUILD_SCRIPT="${BASE_DIR}/${BUILD_SCRIPT_NAME}"
 TOOLCHAIN="/share/Public/toolchain"
 
+if [[ "x$1" != "x" ]];then 
+    BUILD_SCRIPT_NAME=$1
+fi
+
+echo $BUILD_SCRIPT_NAME
+
 if [ ! -d ${TOOLCHAIN}  ]; then
     mkdir ${TOOLCHAIN}    
 fi
